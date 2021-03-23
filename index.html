@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Năm dương lịch: <input type="Number" id="namDuongLich">
+    <button onclick="tinhAmLich()">Năm Âm lịch</button>
+    <p id="namAmLich"></p>
+    <script>
+        function tinhAmLich() {
+            let namDuongLich = Number(document.getElementById("namDuongLich").value);
+            let result = namDuongLich % 10;
+            let result1 = namDuongLich % 12;
+            switch(result) {
+                case 0:
+                    result = "Canh";
+                    break;
+                case 1:
+                    result = "Tân";
+                    break;
+                case 2:
+                    result = "Nhâm";
+                    break;
+                case 3:
+                    result = "Quý";
+                    break;
+                case 4:
+                    result = "Giáp";
+                    break;
+                case 5:
+                    result = "Ất";
+                    break;
+                case 6:
+                    result = "Bính";
+                    break;
+                case 7:
+                    result = "Đinh";
+                    break;
+                case 8:
+                    result = "Mậu";
+                    break;
+                case 9:
+                    result = "Kỷ";
+                    break;
+            }
+            switch(result1) {
+                case 0:
+                    result1 = "Thân";
+                    break;
+                case 1:
+                    result1 = "Dậu";
+                    break;
+                case 2:
+                    result1 = "Tuất";
+                    break;
+                case 3:
+                    result1 = "Hợi";
+                    break;
+                case 4:
+                    result1 = "Tý";
+                    break;
+                case 5:
+                    result1 = "Sửu";
+                    break;
+                case 6:
+                    result1 = "Mão";
+                    break;
+                case 7:
+                    result1 = "Thìn";
+                    break ;
+                case 8:
+                    result1 = "Tỵ";
+                    break;
+                case 9:
+                    result1 = "Ngọ";
+                    break;
+                case 10:
+                    result1 = "Mùi";
+                    break;
+            }
+            document.getElementById("namAmLich").innerHTML = result + result1;
+        }
+    </script>
+</body>
+</html>
